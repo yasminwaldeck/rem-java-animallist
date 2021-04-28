@@ -25,4 +25,13 @@ public class AnimalListItemTest {
 
     }
 
+    @Test
+    public void equalsTest(){
+        Animal test1 = new Animal("test");
+        Animal test2 = new Animal("test");
+        AnimalListItem item1 = new AnimalListItem(test1);
+        AnimalListItem item2 = new AnimalListItem(test2);
+        assertEquals(item1, item2);
+    }
+
 }

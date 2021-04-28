@@ -77,6 +77,8 @@ public class AnimalListTest {
         testList.add(hund);
         testList.add(hund);
 
+        Animal hund2 = new Animal("Hund");
+        testList.add(hund2);
         testList.remove(hund);
 
         //WHEN

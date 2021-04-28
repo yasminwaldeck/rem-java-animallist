@@ -17,7 +17,7 @@ public class AnimalList {
 
     public void remove(Animal animal){
 
-        while(head.getValue() == animal) {
+        while(animal.equals(head.getValue())) {
             this.head = head.getNext();
         }
 
@@ -26,7 +26,7 @@ public class AnimalList {
 
         while (nextItem != null){
 
-            if(nextItem.getValue() != animal) {
+            if(!animal.equals(nextItem.getValue())) {
                 currentItem = currentItem.getNext();
             } else {
                 currentItem.setNext(nextItem.getNext());
