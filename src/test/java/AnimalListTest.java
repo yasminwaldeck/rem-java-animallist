@@ -13,10 +13,10 @@ public class AnimalListTest {
         Animal hund = new Animal("Hund");
         Animal maus = new Animal("Maus");
         AnimalListItem firstItem = new AnimalListItem(hund);
-        AnimalList testList = new AnimalList(firstItem);
+        AnimalList testList = new AnimalList();
 
         //WHEN
-
+        testList.add(hund);
         testList.add(katze);
         testList.add(maus);
 
@@ -34,9 +34,9 @@ public class AnimalListTest {
         Animal maus = new Animal("Maus");
         Animal meerschweinchen = new Animal("Meerschweinchen");
         Animal hamster = new Animal("Hamster");
-        AnimalListItem firstItem = new AnimalListItem(hund);
-        AnimalList testList = new AnimalList(firstItem);
+        AnimalList testList = new AnimalList();
 
+        testList.add(hund);
         testList.add(hund);
         testList.add(katze);
         testList.add(maus);
@@ -65,9 +65,9 @@ public class AnimalListTest {
         Animal maus = new Animal("Maus");
         Animal meerschweinchen = new Animal("Meerschweinchen");
         Animal hamster = new Animal("Hamster");
-        AnimalListItem firstItem = new AnimalListItem(hund);
-        AnimalList testList = new AnimalList(firstItem);
+        AnimalList testList = new AnimalList();
 
+        testList.add(hund);
         testList.add(hund);
         testList.add(katze);
         testList.add(maus);

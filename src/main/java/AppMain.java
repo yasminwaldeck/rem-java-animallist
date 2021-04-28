@@ -7,9 +7,8 @@ public class AppMain {
         Animal meerschweinchen = new Animal("Meerschweinchen");
         Animal hamster = new Animal("Hamster");
 
-        AnimalListItem help = new AnimalListItem(hund);
-
-        AnimalList test = new AnimalList(help);
+        AnimalList test = new AnimalList();
+        test.add(hund);
         test.add(hund);
         test.add(katze);
         test.add(hund);

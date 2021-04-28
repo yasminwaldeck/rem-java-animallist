@@ -3,16 +3,16 @@ public class AnimalList {
     private AnimalListItem head;
     private AnimalListItem latest;
 
-
-    public AnimalList(AnimalListItem head){
-         this.head = head;
-         this.latest = head;
-    }
-
     public void add(Animal animal){
-        AnimalListItem nextItem = new AnimalListItem(animal);
-        latest.setNext(nextItem);
-        latest = nextItem;
+        if (head == null){
+            AnimalListItem first = new AnimalListItem(animal);
+            head = first;
+            latest = first;
+        } else {
+            AnimalListItem nextItem = new AnimalListItem(animal);
+            latest.setNext(nextItem);
+            latest = nextItem;
+        }
     }
 
     public void remove(Animal animal){
@@ -39,12 +39,12 @@ public class AnimalList {
 
     @Override
     public String toString(){
-        String listed = head.toString();
+        StringBuilder listed = new StringBuilder(head.toString());
         AnimalListItem currentItem = head;
         while (currentItem.getNext() != null){
-            listed += " -> " + currentItem.getNext();
+            listed.append(" -> ").append(currentItem.getNext());
             currentItem = currentItem.getNext();
         }
-        return listed;
+        return listed.toString();
     }
 }
