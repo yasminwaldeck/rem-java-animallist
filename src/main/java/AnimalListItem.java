@@ -3,9 +3,8 @@ public class AnimalListItem {
     private AnimalListItem next;
 
     public AnimalListItem(Animal value){
-
-        this.value=value;
-
+        this.value = value;
+        this.next = null;
     }
 
     public Animal getValue() {
