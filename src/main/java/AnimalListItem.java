@@ -8,4 +8,24 @@ public class AnimalListItem {
 
     }
 
+    public Animal getValue() {
+        return value;
+    }
+
+    public void setValue(Animal value) {
+        this.value = value;
+    }
+
+    public AnimalListItem getNext() {
+        return next;
+    }
+
+    public void setNext(AnimalListItem next) {
+        this.next = next;
+    }
+
+    @Override
+    public String toString(){
+        return value.toString();
+    }
 }
